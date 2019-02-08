@@ -4,7 +4,7 @@ Unity3D common useful tools
 Summary  
 
 ## Singleton
-### Namespace - Utilities
+### Namespace : Utilities
 - MonoBehaviorSingletonPersistant
 - MonoBehaviorSingletonNonPersistant
  
