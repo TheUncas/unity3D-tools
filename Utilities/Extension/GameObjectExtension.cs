@@ -8,7 +8,7 @@ using System.Linq;
 */
 namespace Utilities.Extension
 {
-    public static class ExtensionGameObjet
+    public static class GameObjectExtension
     {
         /// 
         /// Check it the gameobject has the specified component
