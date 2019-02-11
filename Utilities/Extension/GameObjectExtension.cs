@@ -13,15 +13,15 @@ namespace Utilities.Extension
         /// 
         /// Check it the gameobject has the specified component
         /// 
-        public static bool HasComponent(this GameObject go) where T : Component
+        public static bool HasComponent<T>(this GameObject go) where T : Component
         {
-            return go.GetComponentsInChildren().FirstOrDefault() != null;
+            return go.GetComponentsInChildren<T>().FirstOrDefault() != null;
         }
 
         /// 
         /// Return a copy of the component
         /// 
-        public static T GetCopyOf(this Component comp, T other) where T : Component
+        public static T GetCopyOf<T>(this Component comp, T other) where T : Component
         {
             Type type = comp.GetType();
 
@@ -50,9 +50,9 @@ namespace Utilities.Extension
         /// 
         /// Copy the component
         /// 
-        public static T AddComponent(this GameObject go, T toAdd) where T : Component
+        public static T AddComponent<T>(this GameObject go, T toAdd) where T : Component
         {
-            return go.AddComponent().GetCopyOf(toAdd) as T;
+            return go.AddComponent<T>().GetCopyOf(toAdd) as T;
         }
     }
 }
